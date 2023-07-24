@@ -4,8 +4,8 @@
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-			<meta name="description" content="A Bootstrap based app landing page template">
-			<meta name="author" content="">
+			<meta name="description" content="smartView 면접관리 시스템 소개 by 메타데스크">
+			<meta name="author" content="metaDesk">
 			<link rel="shortcut icon" href="assets/ico/favicon.ico">
 
 			<title>메타데스크</title>
@@ -178,6 +178,10 @@
 							<p>면접은 대기장,접수처,면접장과 이의 운영자,평가위원 등 다수의 구성정보를 필요로 하며, 이러한 구성에 오류가 없어야 합니다.
 							메타데스크는 고객이 구성한 정보의 검증과 테스트모드에 의한 재검증을 통해 오류없는 면접진행을 보장합니다.</p>
 						</div>
+						<div class="col-xs-10" id="video-container">
+   						 <!-- 비디오를 재생할 iframe을 추가합니다. -->
+    							<iframe id="youtube-player" width="560" height="315" src="https://www.youtube.com/embed/3uxK96qUrx0" title="인하공전 입시면접을 소개합니다❕｜인하공전 면접장 내부 살펴보기｜인하공전 면접｜인하공전 입시면접｜인하공전 면접 질문" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  						</div>
 					</div>
 				</div>
 			</div>
@@ -364,8 +368,21 @@
     <script src="js/flexslider.js"></script>
 	
 <script type="text/javascript">
-$(document).ready(function() {
+    // JavaScript를 이용하여 비디오 재생 기능을 추가합니다.
+    // iframe을 선택합니다.
+    const player = document.getElementById("youtube-player");
 
+    // 비디오를 재생하는 함수를 만듭니다.
+    function playVideo() {
+      // autoplay 파라미터를 1로 설정하여 재생합니다.
+      player.src = "https://www.youtube.com/embed/3uxK96qUrx0?autoplay=1";
+    }
+
+    // 마우스 클릭 이벤트를 감지하여 비디오를 재생합니다.
+    document.getElementById("video-container").addEventListener("click", playVideo);
+	
+$(document).ready(function() {
+	
 	$('.mobileSlider').flexslider({
 		animation: "slide",
 		slideshowSpeed: 3000,
